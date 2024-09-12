@@ -23,4 +23,11 @@ public class UsersAPIService {
         this.user1 = user1;
         return "User Created Successfully!";
     }
+
+    @PutMapping
+    public String updateUsersDetails(@RequestBody Users user1){
+
+        this.user1 = user1;
+        return "User Updated Successfully!";
+    }
 }
