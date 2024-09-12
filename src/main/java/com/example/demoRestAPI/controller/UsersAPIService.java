@@ -2,19 +2,25 @@ package com.example.demoRestAPI.controller;
 
 
 import com.example.demoRestAPI.model.Users;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/Users")
 public class UsersAPIService {
 
+    Users user1;
+
     @GetMapping("{UserID}")
     public Users getUsersDetails(String UserID)
     {
-        return new Users("e20007699", "0537977218", "Al Jawhara", "Garoot");
+        return user1;
+//                new Users("e20007699", "0537977218", "Al Jawhara", "Garoot");
     }
 
+    @PostMapping
+    public String createUsersDetails(@RequestBody Users user1){
 
+        this.user1 = user1;
+        return "User Created Successfully!";
+    }
 }
