@@ -1,5 +1,10 @@
 package com.example.demoRestAPI.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class Users {
 
     private String UserID;
@@ -18,7 +23,6 @@ public class Users {
         UserAddress = userAddress;
         UserName = userName;
     }
-
 
 
     public String getUserID() {
